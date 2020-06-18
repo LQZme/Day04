@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            display: none;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">显示/隐藏</button>
+    <div class="box" id="box" ></div>
+    <script>
+        // 获取div元素的对象，并赋值给变量oBox
+        var oBox = document.getElementById('box')
+
+        // 获取按钮元素的对象，并复制给变量oBtn
+        var oBtn = document.getElementById('btn')
+
+        oBtn.onclick = function() {
+            console.log(oBox.style.display);
+            if(oBox.style.display == "block" || oBox.style.display == "") {  
+                oBox.style.display = "none";
+            }else {
+                oBox.style.display = "block";
+            }                          
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .night {
+            background: black;
+            color: white;
+        }
+        .day {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">开灯/关灯</button>
+    <p>白天不懂夜的黑！</p>
+    <script>
+        //获取button元素对象，并赋值给oBtn
+        var oBtn = document.getElementById("btn")
+        //获取body元素对象，并赋值给oBody
+        var oBody = document.body
+        //给button按钮绑定鼠标点击事件
+        oBtn.onclick = function (){
+            console.log(oBody.style.background)
+            //获取body的class的值
+            if (oBody.className == "night") {
+                oBody.className = "day";
+            } else {
+                oBody.className = "night";
+            }
+        }
+
+    </script>
+</body>
+</html>

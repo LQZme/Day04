@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tips{
+            display: none;
+            width: 180px;
+            background-color: #fffde4;
+            border: 1px solid #dfb86d;
+            text-align: left;
+            padding: 5px 10px;
+            line-height: 18px;
+            color: #dc9632;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- onmouseover调用mouseover（）函数，onmouseout调用mouseout（）函数 -->
+    <label for="remember" onmouseover = mouseover() onmouseout = mouseout()>
+        <input id = "remember" type="checkbox"> 记住账号
+    </label>
+    <div class="tips" id="J_tips">
+        为了您的信息安全，请不要在网吧或公用电脑上使用此功能！
+    </div>
+    <script>
+        //获取div元素对象，并赋值给oTips
+        var oTips = document.getElementById("J_tips");
+        //定义mouseover（）函数
+        function mouseover(){
+            oTips.style.display = "block";
+        }
+        //定义mouseout（）函数
+        function mouseout(){
+            oTips.style.display = "none";
+        }
+    </script>
+</body>
+</html>
