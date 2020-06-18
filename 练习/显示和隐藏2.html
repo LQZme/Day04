@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">显示/隐藏</button>
+    <div class="content" id="content"></div>
+    <script>
+        //获取content元素对象，并赋值给oContent
+        var oContent = document.getElementById("content");
+        document.getElementById("btn").onclick = function () {
+            console.log(oContent.style.display)
+            if(oContent.style.display == "" || oContent.style.display == "block"){
+                oContent.style.display = "none";
+            } else {
+                oContent.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/black.css" id="J_link">
+</head>
+<body>
+    <button onclick= "change('black')">高级黑</button>
+    <button onclick= "change('gray')">奶奶灰</button>
+    <button onclick= "change('green')">原谅色</button>
+    <button onclick= "change('red')">夕阳红</button>
+    <button onclick= "change('yellow')">荧光黄</button>
+    <p>awsl</p>
+    <script>
+       function change(color) {
+           document.getElementById("J_link").href = "./css/" + color + ".css";
+       }
+    </script>
+</body>
+</html>

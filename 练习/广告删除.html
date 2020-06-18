@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ad {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .ad .closeBtn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -8px;
+            margin-left: -10px;
+            cursor: pointer;
+            display: block; /*将行内元素span转换成块级元素*/
+            width: 22px;
+            height: 22px;
+            background: url(../hao123广告删除/hao123.png) no-repeat -512px -208px;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+             //获取closeBtn元素对象，并赋值给oClose
+             var oClose = document.getElementById("J_close");
+            //获取ad元素对象，并赋值给oAd
+            var oAd = document.getElementById("J_ad");
+            oClose.onclick = function() {
+                oAd.style.display = "none";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="ad" id="J_ad">
+        <img src="../hao123广告删除/dati.png" alt="答题换礼">
+        <span class="closeBtn" id="J_close"></span>
+    </div>
+</body>
+</html>
